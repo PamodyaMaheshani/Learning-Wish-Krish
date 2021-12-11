@@ -1,0 +1,12 @@
+There are 3 types of design patterns. Among those 3 types, many design patterns are included. 
+
+    1. Behavioral - Template Method, Observer, Strategy, State, Command
+    2. Creational - Singleton, Builder, Prototype, Abstract Factory, Factory Method
+    3. Structural - Decorator, Flyweight, Adapter, Bridge, Facade, Proxy, Composite
+    
+    
+Behavioral Design Patterns : This concerns with how classes and objects interact or distribute responsibility.
+
+Creational Design Patterns : This involves object initialization and provide a way to decouple client from the objects it needs to instantiate.
+
+Structural Design Patterns : This lets you compose classes or objects into larger structures.
