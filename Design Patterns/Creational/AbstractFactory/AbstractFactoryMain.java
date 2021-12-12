@@ -1,3 +1,11 @@
+/*
+ * Created by Pamodya Maheshani
+ * Created on 11/12/2021
+ * Class name : AbstractFactoryMain 
+ * Committed and pushed to Learning-With-Krish repository
+ * The main class
+ */
+
 package AbstractFactory;
 
 public class AbstractFactoryMain {
