@@ -13,7 +13,7 @@ public class Singleton {
 		
 		// lazy loading - it is created only when the method creating the instance is first called.
 		if (uniqueInstance == null) {
-			synchronized (Singleton2.class) {
+			synchronized (Singleton.class) {
 				if (uniqueInstance == null) {
 					uniqueInstance = new Singleton();
 				}
