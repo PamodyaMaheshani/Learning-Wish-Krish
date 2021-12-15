@@ -9,11 +9,15 @@ public class Singleton {
 	private Singleton() {}
 	
 	// synchronized - overcome the multiple threading issue. 
-	public static synchronized Singleton getInstance() {
+	public static Singleton getInstance() {
 		
 		// lazy loading - it is created only when the method creating the instance is first called.
 		if (uniqueInstance == null) {
-			uniqueInstance = new Singleton();
+			synchronized (Singleton2.class) {
+				if (uniqueInstance == null) {
+					uniqueInstance = new Singleton();
+				}
+			}
 		}
 		
 		return uniqueInstance;
