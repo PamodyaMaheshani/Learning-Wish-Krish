@@ -17,3 +17,4 @@ public class RedShapeDecorator extends ShapeDecorator{
 	}
 
 }
+

@@ -7,3 +7,4 @@ public class Rectangle implements Shape{
 		System.out.println("Shape: Rectangle");		
 	}
 }
+

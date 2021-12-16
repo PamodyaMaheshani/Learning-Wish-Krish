@@ -11,7 +11,8 @@ public class SingletonMain {
 		Singleton singleton1 = Singleton.getInstance();
 		System.out.println(singleton1);
 		
-
 	}
 
 }
+
+

@@ -10,9 +10,7 @@ package FactoryMethod;
 public abstract class Pizza {
 	
 	public abstract void addIngredients();
-	
-	public void bakePizza() {
-		System.out.println("Pizza baked at 400 temperature for 20 minutes");
-	}
 
 }
+
+

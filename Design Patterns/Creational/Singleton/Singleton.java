@@ -3,10 +3,14 @@ package Singleton;
 public class Singleton {
 
 	// A static instance
-	private static Singleton uniqueInstance;
+	private static volatile Singleton uniqueInstance;
 	
 	// need to have a private constructor to block multiple instances
-	private Singleton() {}
+	private Singleton() {
+		if (uniqueInstance != null) {
+			throw new RuntimeException("Use getInstance() method !!");
+		}
+	}
 	
 	// synchronized - overcome the multiple threading issue. 
 	public static Singleton getInstance() {
@@ -23,3 +27,4 @@ public class Singleton {
 		return uniqueInstance;
 	}
 }
+
