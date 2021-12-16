@@ -28,8 +28,7 @@ public class SubjectImplementation implements Subject{
 	@Override
 	public String getState() {
 		return this.state;
-	}
-	
+	}	
 
 	private void notifyObservers() {
 		Iterator<Observer> iterator = observerList.iterator();
@@ -39,5 +38,5 @@ public class SubjectImplementation implements Subject{
 		}
 		
 	}	
-
 }
+
