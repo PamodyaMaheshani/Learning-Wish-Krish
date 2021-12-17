@@ -2,26 +2,19 @@ package FactoryMethod;
 
 public class SimplePizzaFactory {
 	
-	//use getPizzaType method to get object of type of Pizza
-	public Pizza getPizzaType(String pizzaType) {
+	public static PizzaPackages createPizzaPackage (PizzaPackageCode packageCode) {
 		
-		if(pizzaType == null) {
-			return null;
-		}
+		switch(packageCode) {
 		
-		if(pizzaType.equalsIgnoreCase("cheese")) {
-			return new CheesePizza();
+			case MINIPACKAGE:
+				return new PizzaMiniPackage();
+			case BIGPACKAGE:
+				return new PizzaBigPackage();
+			default:		
+				return null;		
 		}
-		else if(pizzaType.equalsIgnoreCase("vege")) {
-			return new VegePizza();
-		}
-		else if(pizzaType.equalsIgnoreCase("pepperoni")) {
-			return new PepperoniPizza();
-		}
-		
-		return null;		
-	}
 
+	}
 }
 
 

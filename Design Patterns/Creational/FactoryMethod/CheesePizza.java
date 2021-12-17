@@ -10,8 +10,8 @@ package FactoryMethod;
 public class CheesePizza extends Pizza{
 
 	@Override
-	public void addIngredients() {
-		System.out.println("Preparing ingredients for cheese pizza");
+	public String toString() {
+		return ("Cheese pizza:)");
 	}	
 
 }
