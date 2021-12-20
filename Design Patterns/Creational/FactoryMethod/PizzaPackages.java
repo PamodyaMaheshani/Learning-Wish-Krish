@@ -17,6 +17,4 @@ public abstract class PizzaPackages {
 	public String toString() {
 		return "Package of Pizza: \n " + pizza ;
 	}
-	
-
 }
