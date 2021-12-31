@@ -1,5 +1,5 @@
 
-First, user has to enter the distance that how long Freddie . Then, it checks the distance is 0 or not. While the distance is 0, the loop is going. Then it checks whether the entered distance is more than or equal to 5, 3 and 1 respectively. (Since first jump takes 5 meters, second jump takes 3 meters, and third jump takes 1 meters). Then it increases the hop count by 1 and then add the rest time accordingly.
+First, user has to enter the distance that how long Freddie should jump. Then, it checks the distance is 0 or not. While the distance is 0, the loop is going. Then it checks whether the entered distance is more than or equal to 5, 3 and 1 respectively. (Since first jump takes 5 meters, second jump takes 3 meters, and third jump takes 1 meters). Then it increases the hop count by 1 and then add the rest time accordingly.
 
 For some distance, this kind of output should be printed.
 
