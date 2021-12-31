@@ -3,8 +3,11 @@ First, user has to enter the distance that how long Freddie . Then, it checks th
 For some distance, this kind of output should be printed.
 
 •	Distance 9 m : Hops – 3, rest time – 6.5 sec
+
 •	Distance 18 m : Hops – 6, rest time – 13 sec
+
 •	Distance 50 m : Hopes – 16, rest time – 33.5 sec
+
 •	Distance 71 m : Hopes – 23, rest time – 48.5 sec
 
 
@@ -13,6 +16,8 @@ So, what happened to the distance like 7 meters. First jump, it covers 5 meters.
 For some distance like the above-mentioned situations, this kind of output should be printed.
 
 •	Distance 7 m : Hops – 3, rest time – 1 sec
+
 •	Distance 49 m : Hopes – 16, rest time – 32.5 sec
+
 •	Distance 70 m : Hopes – 23, rest time – 46.5 sec
 
