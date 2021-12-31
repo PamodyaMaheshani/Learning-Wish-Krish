@@ -1,5 +1,3 @@
-Static Block:
-
 A block is set of code statements that are inside curly braces within a class, method, or a constructor. The blocks are used to group some statements together. So, using a single or less statement/s that grouped statements can be accessed. Mainly there are 3 blocks. Those are static block, empty block and the constructor.
 
 
@@ -21,23 +19,43 @@ Why we use static blocks in Java:
 The static block cannot be declared in any method of a class. In the execution, JVM first executes the static block before main method when loading the bytecode to the memory.
 
 
+
 Empty Block:
 
 This is also called as object block. This type of blocks contains nothing but no or few statements inside a pair of curly braces. It does not contain any block name. Just there are no or few statements inside curly braces. The main purpose of this empty blocks is to group some statements as a unit. Empty blocks can be occurred inside other statements too. 
 
 This empty block is called when creating instances. Situations that instances are created using new keyword, this empty block is called. If a program doesn’t contain any object creation, this block will not be executed. In this block, in the variable declaration, variables can be both static and non-static. As an important fact, the empty block will be called when object creation before calling the constructor. 
 
-The empty block is depends on the object creation not the constructor execution. And also, in object creating before the constructor executes, the empty block is executed. If a class has 4 objects of another class, the empty block is called 4 times per a object. 
-
 Why we use empty blocks in Java: 
 1.	The main purpose of the empty block is to implement the logic that needs to be executed during the object creation before the execution of constructor.
+
+The empty block is depends on the object creation not the constructor execution. And also, in object creating before the constructor executes, the empty block is executed. If a class has 4 objects of another class, the empty block is called 4 times per a object. 
+
 
 
 Constructor Block:
 
+constructor within a class allows constructing the object of the class at runtime. It is invoked when an instance of a class is created using the ‘new’ keyword. 
+
+Characteristics of the Constructor:
+1.	Must be the same name as class name.
+2.	Should not contain any return type. If a return type is contained, when executing JVM considers this as not a constructor but a method. When executing, JVM and the compiler differentiate a constructor and a method based on the return type.
+3.	Whenever an object is created, the constructor is called by the JVM. If the class does not take any constructor, in object creation, the compiler creates the default constructor automatically with the default values in the compile time. 
+4.	Can be non-parameterized or parameterized.
+5.	When calling constructor in object creation, JVM first allocates memory areas for variables (objects) and then execute the constructor. 
+6.	The constructor is called whenever an object is created.
+7.	Can only use access modifier such as public. If use other non-access modifiers, it pops up a compile time error. But better to keep in mind, it can be used other access modifiers such as private, but then that class cannot be inherited since the constructor is private.
+
+So, this block is called in the object creation.
+
+
+
 The order of executing these blocks:
-1.Static Block
-2.Empty Block
-3.Constructor Block
+1.	Static Block
+2.	Empty Block
+3.	Constructor Block
+
 
 First, the JVM executes the static block. As mentioned in previously, when loading the bytecode of the java class to the memory, the static block is executed. Then after loading, the main method is executed. So, first, static block is executed. 
+
+Other both blocks are executed in the object creation process. But empty block is executed before the constructor. So, the order for executing blocks are shown in above.
