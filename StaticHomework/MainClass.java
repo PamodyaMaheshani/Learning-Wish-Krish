@@ -1,7 +1,7 @@
 class MainClass {	
 
 	static {
-		System.out.println("Hi.. I am in the static method in the MainClass");	
+		System.out.println("Hi.. I am in the static block in the MainClass");	
 	}
 
 	public static void main(String[] args) {
