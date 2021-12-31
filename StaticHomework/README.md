@@ -1,4 +1,5 @@
-A block is set of code statements that are inside curly braces within a class, method, or a constructor. The blocks are used to group some statements together. So, using a single or less statement/s that grouped statements can be accessed. Mainly there are 3 blocks. Those are static block, empty block and the constructor.
+A block is set of code statements that are inside curly braces within a class, method, or a constructor. The blocks are used to group some statements together. So, using a single or less statement/s that grouped statements can be accessed. Mainly there are 3 blocks. Those are static block, empty block, and the constructor.
+
 
 
 Static Block:
@@ -16,7 +17,9 @@ Why we use static blocks in Java:
 2.	To initialize static variables of the class.
 3.	Mostly used for changing default value of static variables. 
 
-The static block cannot be declared in any method of a class. In the execution, JVM first executes the static block before main method when loading the bytecode to the memory.
+The static block cannot be declared in any method of a class. In the static block, only static variables and methods can be declared. In the execution, JVM first executes the static block before main method when loading the bytecode to the memory.
+
+Finally, static block helps to initialize the static data members. One class can contain more than one static blocks. If there are multiple static blocks, all of them will be executed in the order of their declaration within the class.  ‘this’ keyword cannot be used in the static block.
 
 
 
@@ -24,12 +27,14 @@ Empty Block:
 
 This is also called as object block. This type of blocks contains nothing but no or few statements inside a pair of curly braces. It does not contain any block name. Just there are no or few statements inside curly braces. The main purpose of this empty blocks is to group some statements as a unit. Empty blocks can be occurred inside other statements too. 
 
-This empty block is called when creating instances. Situations that instances are created using new keyword, this empty block is called. If a program doesn’t contain any object creation, this block will not be executed. In this block, in the variable declaration, variables can be both static and non-static. As an important fact, the empty block will be called when object creation before calling the constructor. 
+This empty block is called when creating instances but before executing the content of the constructor. Situations that instances are created using new keyword, this empty block is called. If a program doesn’t contain any object creation, this block will not be executed. In this block, in the variable declaration, variables can be both static and non-static. As an important fact, the empty block will be called when object creation before calling the constructor. 
 
 Why we use empty blocks in Java: 
 1.	The main purpose of the empty block is to implement the logic that needs to be executed during the object creation before the execution of constructor.
 
-The empty block is depends on the object creation not the constructor execution. And also, in object creating before the constructor executes, the empty block is executed. If a class has 4 objects of another class, the empty block is called 4 times per a object. 
+The empty block depends on the object creation not the constructor execution. And also, in object creating before the constructor executes, the empty block is executed. If a class has 4 objects of another class, the empty block is called 4 times per an object. 
+
+The empty block can be used to initialize the common part of various constructors of a class. A constructor is contained collection of statements or instructions that are executed at the time of object creation. If a class contains multiple empty blocks, they are executed the order they were implemented. ‘this’ keyword cannot be used in the static block.
 
 
 
