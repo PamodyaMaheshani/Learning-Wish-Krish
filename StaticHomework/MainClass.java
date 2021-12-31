@@ -4,7 +4,8 @@ class MainClass {
 
 		Blocks b = new Blocks();
 		System.out.println("");
-		Blocks b1 = new Blocks();
+		Blocks b1 = new Blocks("parameterized");
 	}	
 }
 
+	
