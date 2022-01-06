@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-@Component
-@Endpoint(id = "learnBook")
+@Component //this creates a bean.
+@Endpoint(id = "learnBook") //https://localhost:8080/{id}
 public class LearnEndpoint {
 
     Map<String, Learn> learnBooks = new ConcurrentHashMap<>();
@@ -23,15 +23,15 @@ public class LearnEndpoint {
 
     //get the stage name and return the object
     //here the name parameter is the endpoint
-    //https://localhost:8080/(name)
+    //@Selector - needs to operate this based on this value(name)
     @ReadOperation
-    public Learn getLearnBooks(@Selector String name) {
+    public Learn getLearn(@Selector String name) {
         return learnBooks.get(name);
     }
 
     @WriteOperation
-    public void setLearnBooks(@Selector String name, Learn bookPages ) {
-        learnBooks.put(name, bookPages);
+    public void setLearn(@Selector String name, int bookPages ) {
+        learnBooks.put(name, new Learn(bookPages));
     }
 
     //create our own actuator end point
