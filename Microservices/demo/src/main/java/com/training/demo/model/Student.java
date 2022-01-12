@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "studenttable")
+@Table(name = "student")
 public class Student {
 
     // Data comes as JSON payload. But here, it deals with Java object.

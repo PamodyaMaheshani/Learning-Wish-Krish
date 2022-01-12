@@ -4,9 +4,25 @@ management:
       exposure:
         include: '*'
 
+# using the below mentioned '?createDatabaseIfNotExist=true', it can create new database that didn't exist before
+# url: jdbc:mysql://localhost:3306/mydatabase2?createDatabaseIfNotExist=true
+
+# ddl-auto create - create a table in mydatabase2
+# -- will create the table automatically when run the service
+# -- eventhough, the server is stopped, the table still remains
+# -- every time server starts, the table will be re-created
+# -- loose the data after server is stopped
+
+# ddl-auto create-drop - create a table in mydatabase2
+# -- creates the table automatically, when server starts. drop the table when server is stopped.
+
+# ddl-auto update - create a table in mydatabase2
+# -- eventhough, the server is stopped, the table still remains
+# -- every time server starts, the table records will be remain same. won't loose
+
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/mydb
+    url: jdbc:mysql://localhost:3306/mydatabase
     username: root
     password: Pmhm#1996@25
     driver-class-name: com.mysql.jdbc.Driver
@@ -14,3 +30,4 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    #  ddl-auto: create
