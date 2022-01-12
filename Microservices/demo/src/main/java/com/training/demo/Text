@@ -1,0 +1,12 @@
+#005 the practical video
+
+Externalize Configuration
+1. how to host configure the host
+2. how to host configure the github
+
+Why we need separate configuration server.
+* need to separate configuration from our codebase. it's not good use configurations with our codebase.
+* may have 100 services in our application. has to make  sure each service has same configuration.
+* should be able to change configurations while services are running.
+
+we cannot create multiple servers for each server. But we can create one docker per a service.
