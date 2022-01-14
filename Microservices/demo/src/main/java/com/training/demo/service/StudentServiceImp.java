@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service // to create a bean for this class
-public class StudentServiceImp implements StudentService{
+public class StudentServiceImp implements StudentService {
 
     // service has to deal with the repository
     @Autowired
@@ -24,10 +24,9 @@ public class StudentServiceImp implements StudentService{
     public Student fetchStudentById(int id) {
 
         Optional<Student> student = studentRepository.findById(id);
-        if(student.isPresent()) {
+        if (student.isPresent()) {
             return student.get();
-        }
-        else {
+        } else {
             return null;
         }
     }

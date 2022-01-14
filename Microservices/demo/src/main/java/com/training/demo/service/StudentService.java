@@ -7,5 +7,6 @@ public interface StudentService {
     // always good to use interface-driven programming
 
     Student save(Student student);
+
     Student fetchStudentById(int id);
 }

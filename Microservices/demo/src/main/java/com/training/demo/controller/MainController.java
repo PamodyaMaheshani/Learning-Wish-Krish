@@ -22,7 +22,7 @@ public class MainController {
     }
 
     @RequestMapping(value = "/hello", method = RequestMethod.POST)
-    public String reading () {
+    public String reading() {
         return "Hi.. this is for POST request..";
     }
 
@@ -40,10 +40,9 @@ public class MainController {
     public ResponseEntity<Student> fetchStudent(@RequestParam int id) {
 
         Student student = studentService.fetchStudentById(id);
-        if(student == null) {
+        if (student == null) {
             return ResponseEntity.notFound().build();
-        }
-        else {
+        } else {
             return ResponseEntity.ok().body(student);
         }
     }

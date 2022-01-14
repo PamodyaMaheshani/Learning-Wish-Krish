@@ -19,7 +19,9 @@ public class StageEndpoint {
     @ReadOperation
     public Map<String, Stage> getAllStages() {
         return stages;
-    };
+    }
+
+    ;
 
     //get the stage name and return the object
     //here the name parameter is the endpoint
