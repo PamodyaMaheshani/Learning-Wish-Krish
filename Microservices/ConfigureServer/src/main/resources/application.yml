@@ -1,11 +1,12 @@
 server:
   port: 8191
 
+#this git repository holds the dependencies to the server
 spring:
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/PamodyaMaheshani/spring-cloud-config-store
+          uri: https://github.com/PamodyaMaheshani/microservices-course-on-youtube-config-store
           search-paths:
-            - '*service'
+            - 'service-config/*service'

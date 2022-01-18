@@ -1,0 +1,11 @@
+# this is the config server.
+# this will call to git and fetch the configurations.
+
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8191
+
+
+  config:
+    import=configserver:
