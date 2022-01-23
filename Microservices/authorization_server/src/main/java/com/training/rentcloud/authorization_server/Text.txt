@@ -1,0 +1,4 @@
+In a any regular service, we have
+1. model - keep/handle/model the data
+2. repository - use to connect with the databse
+3. services - deal with data
