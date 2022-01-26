@@ -1,6 +1,6 @@
 package com.training.rentcloud.authorization_server.model;
 
-//import lombok.Data; // use to minimize the develop time by auto generating constructors, getters and setters.
+import lombok.Data; // use to minimize the develop time by auto generating constructors, getters and setters.
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "user")
-//@Data
+@Data
 // carrying data of the user class
 public class User implements Serializable {
 
@@ -40,68 +40,15 @@ public class User implements Serializable {
     public User() {
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public boolean isEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
-    }
-
-    public boolean isAccountNonExpired() {
-        return accountNonExpired;
-    }
-
-    public void setAccountNonExpired(boolean accountNonExpired) {
-        this.accountNonExpired = accountNonExpired;
-    }
-
-    public boolean isCredentialsNonExpired() {
-        return credentialsNonExpired;
-    }
-
-    public void setCredentialsNonExpired(boolean credentialsNonExpired) {
-        this.credentialsNonExpired = credentialsNonExpired;
-    }
-
-    public boolean isAccountNonLocked() {
-        return accountNonLocked;
-    }
-
-    public void setAccountNonLocked(boolean accountNonLocked) {
-        this.accountNonLocked = accountNonLocked;
+    public User(User user) {
+        this.username = user.getUsername();
+        this.password = user.getPassword();
+        this.email = user.getEmail();
+        this.enabled = user.isEnabled();
+        this.accountNonExpired = user.isAccountNonExpired();
+        this.credentialsNonExpired = user.isCredentialsNonExpired();
+        this.accountNonLocked = user.isAccountNonLocked();
+        this.roles = user.getRoles();
     }
 
     public List<Role> getRoles() {
@@ -118,7 +65,5 @@ public class User implements Serializable {
             inverseJoinColumns = {
                     @JoinColumn(name = "role_id", referencedColumnName = "id")})
     private List<Role> roles;
-
-
 
 }

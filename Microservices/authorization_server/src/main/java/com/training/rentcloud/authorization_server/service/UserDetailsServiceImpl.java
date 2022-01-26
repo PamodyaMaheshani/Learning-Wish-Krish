@@ -8,6 +8,7 @@ import org.springframework.security.authentication.AccountStatusUserDetailsCheck
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -20,9 +21,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     UserDetailRepository userDetailRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
 
-        Optional<User> optionalUser = userDetailRepository.findByUserName(username);
+        Optional<User> optionalUser = userDetailRepository.findByUsername(name);
 
         optionalUser.orElseThrow(() -> new UsernameNotFoundException("Username or password os wrong"));
 

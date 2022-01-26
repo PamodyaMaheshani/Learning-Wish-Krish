@@ -10,15 +10,15 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-@Configuration(proxyBeanMethods = true)
+@Configuration
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    UserDetailsService userDetailsService;
+    private UserDetailsService userDetailsService;
 
     // since we don't have authentication manager, needs to implement AuthenticationManagerBean
     @Bean
-    protected AuthenticationManager authenticationManager() throws Exception{
+    protected AuthenticationManager getAuthenticationManager() throws Exception{
         return super.authenticationManagerBean();
     }
 

@@ -12,7 +12,7 @@ import java.util.List;
 public class AuthUserDetail extends User implements UserDetails {
 
     public AuthUserDetail(User user) {
-        super();
+        super(user);
     }
 
     public AuthUserDetail() {
@@ -23,8 +23,8 @@ public class AuthUserDetail extends User implements UserDetails {
 
         List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
 
-        getRoles().forEach(role -> {
-            grantedAuthorities.add(new SimpleGrantedAuthority(Role.getName()));
+        super.getRoles().forEach(role -> {
+            grantedAuthorities.add(new SimpleGrantedAuthority(role.getName()));
             role.getPermissions().forEach(permission -> {
                 grantedAuthorities.add(new SimpleGrantedAuthority(permission.getName()));
             });
